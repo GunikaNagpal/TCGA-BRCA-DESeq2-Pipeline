@@ -74,8 +74,7 @@ Full result tables: [`DEG_results_TCGA_SIGNIFICANT_ONLY.csv`](results/DEG_result
 
 ## Author
 
-Gunika — Bioinformatics Researcher, SBDA Lab, Amity Institute of Biotechnology
-Supervised by Dr. Abhishek Sengupta
+Gunika Nagpal
 
 ## License
 
