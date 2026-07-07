@@ -16,13 +16,44 @@ Developed at the **Systems Biology & Data Analytics (SBDA) Lab, Amity Institute 
 
 ```
 ├── scripts/
-│   └── TCGA_BRCA_DESeq2_pipeline.R      # Full annotated pipeline script
+│   └── TCGA_BRCA_DESeq2_pipeline.R              # Full annotated pipeline script
 ├── docs/
 │   ├── BRCA_RNAseq_Overview_Presentation.pptx   # Project overview slides
-│   └── DESeq2_Line_by_Line_Teaching_Notes.pptx  # Step-by-step teaching notes for the script
-├── results/                              # Output folder (CSV + plots generated on run)
+│   ├── DESeq2_Line_by_Line_Teaching_Notes.pptx  # Step-by-step teaching notes (slides)
+│   └── DESeq2_Line_by_Line_Teaching_Notes.md    # Same notes, as Markdown (renders on GitHub)
+├── results/                                     # Pipeline outputs (CSVs + plots)
 └── README.md
 ```
+
+## Results
+
+Run on the full TCGA-BRCA dataset: **1,249 samples** (1,135 Tumor + 114 Normal) × **63,856 genes** (~39k after low-expression filtering) → **10,683 DEGs** (7,190 UP, 3,493 DOWN in Tumor vs Normal).
+
+**Quality control — before vs after VST normalization:**
+
+| Before | After |
+|---|---|
+| ![Raw counts boxplot](results/boxplot_raw_TCGA.png) | ![VST-normalized boxplot](results/boxplot_vst_TCGA.png) |
+
+**Volcano plot** — all filtered genes, UP (red) / DOWN (blue) / not significant (grey):
+
+![Volcano plot](results/volcano_TCGA.png)
+
+**PCA** — Tumor vs Normal separation:
+
+![PCA plot](results/PCA_TCGA.png)
+
+**MA plot** — fold change vs mean expression:
+
+![MA plot](results/MA_TCGA.png)
+
+**Heatmaps** — top DEGs, expression centered per gene:
+
+| Top 25 DEGs (samples ordered by condition) | Top 30 DEGs (hierarchically clustered) |
+|---|---|
+| ![Heatmap top 25](results/heatmap_top25_TCGA.png) | ![Heatmap top 30 clustered](results/heatmap_TCGA.png) |
+
+Full result tables: [`DEG_results_TCGA_SIGNIFICANT_ONLY.csv`](results/DEG_results_TCGA_SIGNIFICANT_ONLY.csv) (10,683 DEGs only) and [`DEG_results_TCGA.csv`](results/DEG_results_TCGA.csv) (all ~39k filtered genes).
 
 ## How to Run
 
@@ -38,8 +69,8 @@ Developed at the **Systems Biology & Data Analytics (SBDA) Lab, Amity Institute 
 
 ## Documentation
 
-- **Overview presentation** — background on NGS, TCGA-BRCA, and the analysis workflow, aimed at someone new to RNA-seq.
-- **Line-by-line teaching notes** — walks through all 17 steps of the pipeline script in detail, explaining the biological and statistical reasoning behind each block of code.
+- **Overview presentation** ([`docs/BRCA_RNAseq_Overview_Presentation.pptx`](docs/BRCA_RNAseq_Overview_Presentation.pptx)) — background on NGS, TCGA-BRCA, and the analysis workflow, aimed at someone new to RNA-seq.
+- **Line-by-line teaching notes** ([`docs/DESeq2_Line_by_Line_Teaching_Notes.md`](docs/DESeq2_Line_by_Line_Teaching_Notes.md)) — walks through all 17 steps of the pipeline script in detail, explaining the biological and statistical reasoning behind each block of code. Also available as slides.
 
 ## Author
 
