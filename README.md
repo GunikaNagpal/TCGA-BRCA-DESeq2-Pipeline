@@ -67,10 +67,6 @@ Full result tables: [`DEG_results_TCGA_SIGNIFICANT_ONLY.csv`](results/DEG_result
 - R (≥ 4.2 recommended)
 - Packages: `recount3`, `DESeq2`, `ggplot2`, `pheatmap`, `ggrepel` (install instructions are included at the top of the script)
 
-## Documentation
-
-- **Overview presentation** ([`docs/BRCA_RNAseq_Overview_Presentation.pptx`](docs/BRCA_RNAseq_Overview_Presentation.pptx)) — background on NGS, TCGA-BRCA, and the analysis workflow, aimed at someone new to RNA-seq.
-- **Line-by-line teaching notes** ([`docs/DESeq2_Line_by_Line_Teaching_Notes.md`](docs/DESeq2_Line_by_Line_Teaching_Notes.md)) — walks through all 17 steps of the pipeline script in detail, explaining the biological and statistical reasoning behind each block of code. Also available as slides.
 
 ## Author
 
