@@ -92,8 +92,3 @@ See [`survival_analysis/README.md`](survival_analysis/README.md) for full method
 - **Line-by-line teaching notes** ([`docs/DESeq2_Line_by_Line_Teaching_Notes.md`](docs/DESeq2_Line_by_Line_Teaching_Notes.md)) — walks through all 17 steps of the pipeline script in detail, explaining the biological and statistical reasoning behind each block of code. Also available as slides.
 - **Survival analysis methodology** ([`survival_analysis/README.md`](survival_analysis/README.md)) — detailed write-up of the Kaplan-Meier/Cox regression methodology and how it connects back to the DEG pipeline.
 
-## Author
-Gunika — Bioinformatics Researcher, SBDA Lab, Amity Institute of Biotechnology
-
-## License
-MIT (or update to your preference)
